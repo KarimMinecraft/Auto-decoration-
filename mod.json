@@ -1,0 +1,44 @@
+{
+	"geode": "5.0.0",
+	"gd": {
+		"win": "*",
+		"android": "*",
+		"mac": "*",
+		"ios": "*"
+	},
+	"version": "v1.0.0",
+	"id": "karim.auto-deco",
+	"name": "Auto Deco",
+	"developer": "Karim",
+	"description": "Dekorasi otomatis di editor: pilih objek, tekan tombol Deco, dan dekorasi langsung ditaruh di sekitarnya.",
+	"tags": ["editor", "utility", "customization"],
+	"settings": {
+		"deco-id": {
+			"type": "int",
+			"name": "ID Objek Deko",
+			"description": "ID objek yang dipakai sebagai dekorasi. Ganti ke ID dekorasi favoritmu.",
+			"default": 1,
+			"min": 1,
+			"max": 4000
+		},
+		"deco-style": {
+			"type": "string",
+			"name": "Gaya Deko",
+			"description": "Di mana dekorasi ditaruh di sekitar objek terpilih.",
+			"default": "Outline",
+			"one-of": ["Outline", "Atas", "Bawah", "Kiri-Kanan", "Sudut"]
+		},
+		"deco-layer-back": {
+			"type": "bool",
+			"name": "Taruh di Belakang",
+			"description": "Dekorasi ditaruh di layer belakang objek asli (B1).",
+			"default": true
+		},
+		"deco-skip-occupied": {
+			"type": "bool",
+			"name": "Lewati Posisi Terisi",
+			"description": "Jangan taruh dekorasi di posisi yang sudah ada objek terpilih.",
+			"default": true
+		}
+	}
+}
